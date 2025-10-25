@@ -1,0 +1,72 @@
+{
+    "type": "module",
+    "license": "ISC",
+    "version": "0.0.1",
+    "name": "react-termeh",
+    "description": "A modern React UI component library built on Termeh.",
+    "sideEffects": false,
+    "module": "./dist/index.es.js",
+    "types": "./dist/index.d.ts",
+    "style": "./dist/style.scss",
+    "sass": "./dist/style.scss",
+    "exports": {
+        ".": {
+            "sass": "./dist/style.scss",
+            "types": "./dist/index.d.ts",
+            "import": "./dist/index.es.js"
+        }
+    },
+    "files": [
+        "dist"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/mekramy/react-termeh.git"
+    },
+    "author": {
+        "name": "Mojtaba Ekramy",
+        "email": "m.ajamekramy@gmail.com",
+        "url": "https://github.com/mekramy"
+    },
+    "keywords": [
+        "ui",
+        "ui-library",
+        "react-ui",
+        "react-utils",
+        "react-hooks",
+        "react-components"
+    ],
+    "scripts": {
+        "test": "vitest",
+        "build": "vite build",
+        "prepare": "npm run build",
+        "lint": "eslint src/**/*.{ts,tsx} --fix",
+        "demo": "vite --config vite.config.ts demo"
+    },
+    "devDependencies": {
+        "@types/moment-jalaali": "^0.7.9",
+        "@types/node": "^24.5.2",
+        "@types/react": "^18.2.0",
+        "@types/react-dom": "^18.2.0",
+        "@vitejs/plugin-react": "^5.1.0",
+        "babel-plugin-react-compiler": "^19.1.0-rc.3",
+        "eslint": "^9.38.0",
+        "eslint-plugin-react-hooks": "^5.2.0",
+        "eslint-plugin-react-refresh": "^0.4.22",
+        "globals": "^16.4.0",
+        "typescript": "^5.9.2",
+        "typescript-eslint": "^8.46.2",
+        "vite": "^7.1.12",
+        "vite-plugin-dts": "^4.5.4",
+        "vite-plugin-static-copy": "^3.1.4",
+        "vitest": "^4.0.3"
+    },
+    "peerDependencies": {
+        "moment-jalaali": "^0.10.0",
+        "motion": "^12.23.24",
+        "nanoid": "^5.1.6",
+        "react": "^19.0.0",
+        "react-dom": "^19.0.0",
+        "termeh": "^1.0.1"
+    }
+}
