@@ -14,7 +14,7 @@ export default defineConfig({
         lib: {
             formats: ["es"],
             name: "ReactTermeh",
-            entry: resolve(__dirname, "src", "index.ts"),
+            entry: resolve(__dirname, "packages", "index.ts"),
             fileName: (format) => `index.${format}.js`,
         },
         rollupOptions: {
@@ -32,7 +32,7 @@ export default defineConfig({
             copyDtsFiles: true,
         }),
         viteStaticCopy({
-            targets: [{ src: "./src/style.scss", dest: "." }],
+            targets: [{ src: "./packages/style.scss", dest: "." }],
         }),
     ],
 });

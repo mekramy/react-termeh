@@ -40,7 +40,7 @@
         "test": "vitest",
         "build": "vite build",
         "prepare": "npm run build",
-        "lint": "eslint src/**/*.{ts,tsx} --fix",
+        "lint": "eslint packages/**/*.{ts,tsx} --fix",
         "demo": "vite --config vite.config.ts demo"
     },
     "devDependencies": {
