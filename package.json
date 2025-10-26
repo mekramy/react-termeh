@@ -62,11 +62,15 @@
         "vitest": "^4.0.3"
     },
     "peerDependencies": {
+        "@maskito/core": "^4.0.0",
+        "@maskito/kit": "^4.0.0",
+        "@maskito/react": "^4.0.0",
         "moment-jalaali": "^0.10.0",
         "motion": "^12.23.24",
         "nanoid": "^5.1.6",
         "react": "^19.0.0",
         "react-dom": "^19.0.0",
-        "termeh": "^1.0.1"
+        "termeh": "^1.0.1",
+        "yup": "^1.7.1"
     }
 }
