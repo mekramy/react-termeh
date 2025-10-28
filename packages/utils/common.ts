@@ -1,3 +1,18 @@
+import { customAlphabet } from "nanoid";
+
+const idGenerator = customAlphabet(
+    "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ",
+);
+
+/**
+ * Generates a new random ID string with specified length
+ * @param length - The length of the ID to generate (default: 10)
+ * @returns A random string containing alphanumeric characters
+ */
+export function newId(length = 10): string {
+    return idGenerator(length);
+}
+
 /**
  * Returns the value if it is not null or undefined, otherwise returns the alternative.
  * @param v - The value to check.

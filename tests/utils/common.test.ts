@@ -1,5 +1,12 @@
 import { describe, it, expect } from "vitest";
-import { nullish, alter, toArray, deepClone } from "../../packages";
+import { nullish, alter, toArray, deepClone, newId } from "../../packages";
+
+describe("newId", () => {
+    it("returns value if not nullish", () => {
+        expect(newId(6)).length(6);
+        expect(newId(11)).length(11);
+    });
+});
 
 describe("nullish", () => {
     it("returns value if not nullish", () => {
