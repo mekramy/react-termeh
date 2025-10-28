@@ -68,7 +68,7 @@ export function ago(date: MomentInput, locale: "en" | "fa" = "en"): string {
  */
 export function toHMS(
     duration: number,
-    unit: "milliseconds" | "seconds" = "seconds"
+    unit: "milliseconds" | "seconds" = "seconds",
 ): { hours: number; minutes: number; seconds: number } {
     const absDuration = Math.abs(duration);
     let totalSeconds: number;
@@ -103,7 +103,7 @@ export function toHMS(
 function translateDuration(
     value: number,
     unit: string,
-    locale: "en" | "fa"
+    locale: "en" | "fa",
 ): string {
     const translation = DURATION_TRANSLATIONS[unit]?.[locale] ?? unit;
     return `${value} ${translation}`;
@@ -119,7 +119,7 @@ function translateDuration(
 export function humanize(
     duration: number,
     unit: moment.DurationInputArg2 = "milliseconds",
-    locale: "en" | "fa" = "en"
+    locale: "en" | "fa" = "en",
 ): string {
     const dur = moment.duration(Math.abs(duration), unit);
     const parts: string[] = [];

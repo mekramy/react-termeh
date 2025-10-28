@@ -42,7 +42,7 @@ export function addIPPortMethod(defMessage = "ip_port") {
         "ipPort",
         function (message: string = defMessage) {
             return this.test("ipPort", message, (v) => !v || isValidIPPort(v));
-        }
+        },
     );
 }
 

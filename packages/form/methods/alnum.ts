@@ -10,7 +10,7 @@ import * as yup from "yup";
  */
 export function isAlphaNumeric(
     value?: string,
-    includes: string[] = []
+    includes: string[] = [],
 ): boolean {
     if (!value) return false;
 
@@ -35,9 +35,9 @@ export function addAlphaNumericMethod(defMessage = "alnum") {
             return this.test(
                 "alnum",
                 message,
-                (v) => !v || isAlphaNumeric(v, includes)
+                (v) => !v || isAlphaNumeric(v, includes),
             );
-        }
+        },
     );
 }
 

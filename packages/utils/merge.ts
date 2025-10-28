@@ -20,7 +20,7 @@ export type MergeOptions = Record<string, MergeStrategy>;
  */
 export type DeepPartial<T> = {
     [P in keyof T]?: T[P] extends object
-        ? T[P] extends Function
+        ? T[P] extends (...args: unknown[]) => unknown
             ? T[P]
             : DeepPartial<T[P]>
         : T[P];
@@ -39,7 +39,7 @@ export type DeepPartial<T> = {
 export function mergeConfig<T extends Record<string, any>>(
     config: T,
     newConfig: DeepPartial<T>,
-    options?: MergeOptions
+    options?: MergeOptions,
 ): T {
     const strategies = options || {};
 

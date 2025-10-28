@@ -8,16 +8,19 @@ describe("isValidFileType", () => {
 
     it("returns true for allowed MIME types", () => {
         expect(isValidFileType(makeFile("image/png"), ["image/png"])).toBe(
-            true
+            true,
         );
         expect(
-            isValidFileType(makeFile("text/plain"), ["text/plain", "image/png"])
+            isValidFileType(makeFile("text/plain"), [
+                "text/plain",
+                "image/png",
+            ]),
         ).toBe(true);
     });
 
     it("returns false for disallowed MIME types", () => {
         expect(isValidFileType(makeFile("image/jpeg"), ["image/png"])).toBe(
-            false
+            false,
         );
         expect(isValidFileType(undefined, ["image/png"])).toBe(false);
     });

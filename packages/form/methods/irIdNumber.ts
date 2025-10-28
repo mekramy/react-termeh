@@ -26,9 +26,9 @@ export function addIranianIdNumberMethod(defMessage = "id_number") {
             return this.test(
                 "iranianIdNumber",
                 message,
-                (v) => !v || isValidIranianIdNumber(v)
+                (v) => !v || isValidIranianIdNumber(v),
             );
-        }
+        },
     );
 }
 

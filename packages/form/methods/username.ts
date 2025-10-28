@@ -24,9 +24,9 @@ export function addUsernameMethod(defMessage = "username") {
             return this.test(
                 "username",
                 message,
-                (v) => !v || isValidUsername(v)
+                (v) => !v || isValidUsername(v),
             );
-        }
+        },
     );
 }
 

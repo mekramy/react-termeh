@@ -40,9 +40,9 @@ export function addIranianNationalCodeMethod(defMessage = "national_code") {
             return this.test(
                 "iranianNationalCode",
                 message,
-                (v) => !v || isValidIranianNationalCode(v)
+                (v) => !v || isValidIranianNationalCode(v),
             );
-        }
+        },
     );
 }
 

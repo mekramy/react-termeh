@@ -10,7 +10,7 @@ import * as yup from "yup";
  */
 export function isAlphaNumericWithPersian(
     value?: string,
-    includes: string[] = []
+    includes: string[] = [],
 ): boolean {
     if (!value) return false;
 
@@ -36,9 +36,9 @@ export function addAlphaNumericWithPersianMethod(defMessage = "alnumfa") {
             return this.test(
                 "alnumfa",
                 message,
-                (v) => !v || isAlphaNumericWithPersian(v, includes)
+                (v) => !v || isAlphaNumericWithPersian(v, includes),
             );
-        }
+        },
     );
 }
 

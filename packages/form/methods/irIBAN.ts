@@ -57,9 +57,9 @@ export function addIranianIBANMethod(defMessage = "iban") {
             return this.test(
                 "iranianIBAN",
                 message,
-                (v) => !v || isValidIranianIBAN(v)
+                (v) => !v || isValidIranianIBAN(v),
             );
-        }
+        },
     );
 }
 

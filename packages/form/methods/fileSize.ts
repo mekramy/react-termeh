@@ -11,7 +11,7 @@ import * as yup from "yup";
 export function isValidFileSize(
     file?: File,
     minBytes: number = 0,
-    maxBytes: number = Number.MAX_SAFE_INTEGER
+    maxBytes: number = Number.MAX_SAFE_INTEGER,
 ): boolean {
     if (!file) return false;
     return file.size >= minBytes && file.size <= maxBytes;
@@ -33,7 +33,7 @@ export function addFileSizeMethod(defaultMessage = "file_size") {
                 if (!file) return true;
                 return isValidFileSize(file as File, min, max);
             });
-        }
+        },
     );
 
     yup.addMethod<yup.MixedSchema>(
@@ -45,12 +45,12 @@ export function addFileSizeMethod(defaultMessage = "file_size") {
                 const files: File[] = Array.isArray(v)
                     ? v
                     : v.item
-                    ? Array.from(v as FileList)
-                    : [];
+                      ? Array.from(v as FileList)
+                      : [];
                 if (!files.length) return true;
                 return files.every((f) => isValidFileSize(f, min, max));
             });
-        }
+        },
     );
 }
 

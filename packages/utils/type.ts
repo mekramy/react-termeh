@@ -1,11 +1,10 @@
 /**
- * @typedef {string | number | boolean | null} PrimitiveType
  * Represents a basic, non-object data type.
+ * @type {string | number | boolean | null}
  */
 export type PrimitiveType = string | number | boolean | null;
 
 /**
- * @typedef {PrimitiveType | PrimitiveType[] | Record<string, PrimitiveType>} CompoundType
  * Represents a complex data type composed of primitives, arrays of primitives, or records of primitives.
  */
 export type CompoundType =
@@ -112,7 +111,7 @@ export function isPrimitiveArray(v: unknown): v is PrimitiveType[] {
  * @returns True if the value is an object and all its property values are primitives, false otherwise.
  */
 export function isPrimitiveRecord(
-    v: unknown
+    v: unknown,
 ): v is Record<string, PrimitiveType> {
     return isObject(v) && Object.values(v).every(isPrimitive);
 }

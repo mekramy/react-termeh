@@ -25,9 +25,9 @@ export function addIranianPostalCodeMethod(defMessage = "postal_code") {
             return this.test(
                 "iranianPostalCode",
                 message,
-                (v) => !v || isValidIranianPostalCode(v)
+                (v) => !v || isValidIranianPostalCode(v),
             );
-        }
+        },
     );
 }
 

@@ -44,9 +44,9 @@ export function addIranianBankCardMethod(defMessage = "bank_card") {
             return this.test(
                 "iranianBankCard",
                 message,
-                (v) => !v || isValidIranianBankCard(v)
+                (v) => !v || isValidIranianBankCard(v),
             );
-        }
+        },
     );
 }
 

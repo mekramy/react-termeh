@@ -83,9 +83,9 @@ export function resolveMask(tokens: TokenMap, mask: Definition): MaskitoMask {
  */
 export function resolveOptions(
     tokens: TokenMap,
-    option: MaskOption
+    option: MaskOption,
 ): MaskitoOptions {
     return option?.mask
         ? { ...(option?.options || {}), mask: resolveMask(tokens, option.mask) }
-        : option.options ?? ({} as MaskitoOptions);
+        : (option.options ?? ({} as MaskitoOptions));
 }

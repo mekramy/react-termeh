@@ -11,7 +11,7 @@ describe("parseNumber", () => {
                 .text("click on:")
                 .space()
                 .raw(`<a href="myapp.com">App Login Page</a>`)
-                .toString()
+                .toString(),
         ).toBe(`click on:&nbsp;<a href="myapp.com">App Login Page</a>`);
     });
     it("custom elements", () => {
@@ -21,9 +21,9 @@ describe("parseNumber", () => {
                 .space()
                 .strong("John")
                 .span(", Have a nice day")
-                .toString()
+                .toString(),
         ).toBe(
-            "<span>Hello</span>&nbsp;<strong>John</strong><span>, Have a nice day</span>"
+            "<span>Hello</span>&nbsp;<strong>John</strong><span>, Have a nice day</span>",
         );
     });
 });

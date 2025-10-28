@@ -23,7 +23,7 @@ interface MaskerProps {
 const Masker: React.FC<MaskerProps> = ({ value, constructor }) => {
     const masked = useMemo(
         () => mask(value, constructor),
-        [value, constructor]
+        [value, constructor],
     );
 
     return <>{masked}</>;

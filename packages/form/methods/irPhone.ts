@@ -26,9 +26,9 @@ export function addIranianPhoneMethod(defMessage = "phone") {
             return this.test(
                 "iranianPhone",
                 message,
-                (v) => !v || isValidIranianPhone(v)
+                (v) => !v || isValidIranianPhone(v),
             );
-        }
+        },
     );
 }
 

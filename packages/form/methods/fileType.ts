@@ -9,7 +9,7 @@ import * as yup from "yup";
  */
 export function isValidFileType(
     file?: File,
-    allowedMimes: string[] = []
+    allowedMimes: string[] = [],
 ): boolean {
     if (!file) return false;
     return allowedMimes.includes(file.type);
@@ -31,7 +31,7 @@ export function addFileTypeMethod(defaultMessage = "file_type") {
                 if (!file) return true;
                 return isValidFileType(file as File, allowedMimes);
             });
-        }
+        },
     );
 
     yup.addMethod<yup.MixedSchema>(
@@ -43,14 +43,14 @@ export function addFileTypeMethod(defaultMessage = "file_type") {
                 const files: File[] = Array.isArray(v)
                     ? v
                     : v.item
-                    ? Array.from(v as FileList)
-                    : [];
+                      ? Array.from(v as FileList)
+                      : [];
                 if (!files.length) return true;
                 return files.every((file) =>
-                    isValidFileType(file as File, allowedMimes)
+                    isValidFileType(file as File, allowedMimes),
                 );
             });
-        }
+        },
     );
 }
 

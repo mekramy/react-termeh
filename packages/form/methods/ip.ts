@@ -31,7 +31,7 @@ export function addIPMethod(defMessage = "ip") {
         "ip",
         function (message: string = defMessage) {
             return this.test("ip", message, (v) => !v || isValidIP(v));
-        }
+        },
     );
 }
 

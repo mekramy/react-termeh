@@ -13,11 +13,11 @@ import type { MaskOption } from "./types";
  */
 export function useMasker(
     constructor: MaskOption,
-    elementPredicate?: MaskitoElementPredicate
+    elementPredicate?: MaskitoElementPredicate,
 ) {
     const options = useMemo(
         () => resolveOptions(globalTokens, constructor),
-        [constructor]
+        [constructor],
     );
 
     return useMaskito({ options, elementPredicate });

@@ -26,9 +26,9 @@ export function addIranianMobileMethod(defMessage = "mobile") {
             return this.test(
                 "iranianMobile",
                 message,
-                (v) => !v || isValidIranianMobile(v)
+                (v) => !v || isValidIranianMobile(v),
             );
-        }
+        },
     );
 }
 

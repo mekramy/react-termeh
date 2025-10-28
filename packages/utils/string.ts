@@ -69,7 +69,7 @@ export function slugifyUnicode(joiner: string, ...items: string[]): string {
  */
 export function mapValue(
     v: string,
-    replacements: Record<string, string>
+    replacements: Record<string, string>,
 ): string {
     if (v in replacements) return replacements[v];
     if ("*" in replacements) return replacements["*"];
