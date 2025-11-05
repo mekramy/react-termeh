@@ -9,7 +9,7 @@ import { extractNumeric } from "../../utils";
  * @returns True if valid, otherwise false.
  */
 export function isValidIranianNationalCode(nationalCode?: string): boolean {
-    if (!nationalCode) return false;
+    if (!nationalCode) return true;
     nationalCode = extractNumeric(nationalCode);
 
     if (!/^[0-9]{10}$/.test(nationalCode)) return false;

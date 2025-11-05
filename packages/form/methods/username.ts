@@ -7,7 +7,7 @@ import * as yup from "yup";
  * @returns True if valid, otherwise false.
  */
 export function isValidUsername(username?: string): boolean {
-    if (!username) return false;
+    if (!username) return true;
     return /^[a-zA-Z0-9_]+$/.test(username);
 }
 

@@ -7,7 +7,7 @@ import * as yup from "yup";
  * @returns True if valid, otherwise false.
  */
 export function isValidIPPort(ipPort?: string): boolean {
-    if (!ipPort) return false;
+    if (!ipPort) return true;
 
     // Find the last colon to separate port
     const lastColonIndex = ipPort.lastIndexOf(":");

@@ -8,7 +8,7 @@ import { extractNumeric } from "../../utils";
  * @returns True if valid, otherwise false.
  */
 export function isValidIranianPostalCode(postalCode?: string): boolean {
-    if (!postalCode) return false;
+    if (!postalCode) return true;
     return /^[0-9]{10}$/.test(extractNumeric(postalCode));
 }
 

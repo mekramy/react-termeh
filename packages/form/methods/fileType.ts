@@ -11,7 +11,7 @@ export function isValidFileType(
     file?: File,
     allowedMimes: string[] = [],
 ): boolean {
-    if (!file) return false;
+    if (!file) return true;
     return allowedMimes.includes(file.type);
 }
 

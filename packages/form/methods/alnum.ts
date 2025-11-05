@@ -12,7 +12,7 @@ export function isAlphaNumeric(
     value?: string,
     includes: string[] = [],
 ): boolean {
-    if (!value) return false;
+    if (!value) return true;
 
     const escaped = includes
         .map((ch) => ch.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"))

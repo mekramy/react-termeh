@@ -12,11 +12,11 @@ import type { MaskOption } from "./types";
  * @returns A ref object to be attached to the target input element
  */
 export function useMasker(
-    constructor: MaskOption,
+    constructor: MaskOption | null,
     elementPredicate?: MaskitoElementPredicate,
 ) {
     const options = useMemo(
-        () => resolveOptions(globalTokens, constructor),
+        () => (constructor ? resolveOptions(globalTokens, constructor) : null),
         [constructor],
     );
 

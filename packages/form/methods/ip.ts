@@ -7,7 +7,7 @@ import * as yup from "yup";
  * @returns True if valid, otherwise false.
  */
 export function isValidIP(ip?: string): boolean {
-    if (!ip) return false;
+    if (!ip) return true;
 
     // IPv4 regex
     const ipv4 =

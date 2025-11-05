@@ -13,7 +13,7 @@ export function isValidFileSize(
     minBytes: number = 0,
     maxBytes: number = Number.MAX_SAFE_INTEGER,
 ): boolean {
-    if (!file) return false;
+    if (!file) return true;
     return file.size >= minBytes && file.size <= maxBytes;
 }
 

@@ -12,7 +12,7 @@ export function isAlphaNumericWithPersian(
     value?: string,
     includes: string[] = [],
 ): boolean {
-    if (!value) return false;
+    if (!value) return true;
 
     const persianChars = "\u0600-\u06FF\uFB8A\u067E\u0686\u0698\u06AF";
     const escaped = includes

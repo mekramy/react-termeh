@@ -9,7 +9,7 @@ import { extractNumeric } from "../../utils";
  * @returns True if valid, otherwise false.
  */
 export function isValidIranianMobile(mobile?: string): boolean {
-    if (!mobile) return false;
+    if (!mobile) return true;
     return /^09[0-9]{9}$/.test(extractNumeric(mobile));
 }
 

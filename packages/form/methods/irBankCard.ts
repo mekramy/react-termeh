@@ -9,7 +9,7 @@ import { extractNumeric } from "../../utils";
  * @returns True if valid, otherwise false.
  */
 export function isValidIranianBankCard(cardNumber?: string): boolean {
-    if (!cardNumber) return false;
+    if (!cardNumber) return true;
     cardNumber = extractNumeric(cardNumber);
 
     // Must be exactly 16 digits

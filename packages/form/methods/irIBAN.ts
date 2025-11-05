@@ -9,7 +9,7 @@ import { extractNumeric } from "../../utils";
  * @returns True if valid, otherwise false.
  */
 export function isValidIranianIBAN(iban?: string): boolean {
-    if (!iban) return false;
+    if (!iban) return true;
     iban = extractNumeric(iban);
 
     // Ensure it starts with "IR"
